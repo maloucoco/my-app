@@ -84,7 +84,6 @@ export default function Player({ song }: PlayerProps) {
       <audio ref={audioRef} preload="metadata" />
 
       <div className="flex flex-col md:flex-row items-center gap-6">
-        {/* 封面 + 旋转动画（播放时旋转） */}
         <div className="relative">
           <div
             className={`w-36 h-36 md:w-44 md:h-44 rounded-2xl shadow-2xl overflow-hidden transition-transform duration-300 ${
@@ -103,12 +102,10 @@ export default function Player({ song }: PlayerProps) {
           </div>
         </div>
 
-        {/* 歌曲信息与控制 */}
         <div className="flex-1 w-full">
           <h3 className="text-2xl font-bold mb-1">{song.title}</h3>
           <p className="text-indigo-200 mb-4">{song.artist}</p>
 
-          {/* 进度条 */}
           <div className="space-y-2">
             <input
               type="range"
@@ -124,7 +121,6 @@ export default function Player({ song }: PlayerProps) {
             </div>
           </div>
 
-          {/* 控制按钮 */}
           <div className="flex justify-center md:justify-start items-center gap-4 mt-4">
             <button
               onClick={() => skip(-10)}
